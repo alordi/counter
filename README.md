@@ -1,6 +1,6 @@
 To Run:
 
-In client:
+In client (this is the frontend):
 
 ``` npm install ```
 
@@ -8,7 +8,7 @@ In client:
 
 Go to separate terminal
 
-From root folder:
+From root folder (this is the backend):
 
 ``` npm install ```
 
