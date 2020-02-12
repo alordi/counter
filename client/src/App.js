@@ -28,7 +28,7 @@ class App extends React.Component {
 
   async getCounter(user, id){
     await axios
-          .get('/' + user + '/counters/' + id, {
+          .get('/' + id, {
           })
           .then(response => {
             console.log(response.data);

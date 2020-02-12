@@ -41,7 +41,7 @@ app.get('/:username', async function(req, res) {
 });
 
 // get the counters of the user
-app.get('/:username/counters/:_id', async function(req, res) {
+app.get('/:_id', async function(req, res) {
   const _id = req.params._id;
   try {
       let userCounter = await Counter.findById(_id);
