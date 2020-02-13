@@ -111,7 +111,7 @@ app.put('/:_id/downvote', async function(req, res) {
 
 /* DELETE Requests */
 /*Delete a counter*/
-router.delete('/:_id', async function(req, res) {
+app.delete('/:_id', async function(req, res) {
   const conditions = {
       _id: req.params._id
   }
