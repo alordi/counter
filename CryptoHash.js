@@ -2,7 +2,7 @@
  * Code modified from:
  * https://ciphertrick.com/salt-hash-passwords-using-nodejs-crypto/
  */
-import crypto from 'crypto';
+//import crypto from 'crypto';
 
 const hashSaltLength = 20
 
@@ -20,7 +20,7 @@ class CryptoHash {
      * @param {string} password - List of required fields.
      * @param {string} salt - Data to be validated.
      */
-    static sha512 = function (password, salt) {
+    static sha512(password, salt) {
         var hash = crypto.createHmac('sha512', salt); /** Hashing algorithm sha512 */
         hash.update(password);
         var value = hash.digest('hex');
@@ -28,7 +28,7 @@ class CryptoHash {
             salt: salt,
             passwordHash: value
         };
-    };
+    }
 
     static hashPasswordWithRandomSalt(password) {
         var salt = this.generateRandomSalt();
@@ -48,4 +48,4 @@ class CryptoHash {
     }
 }
 
-export default CryptoHash;
+//export default CryptoHash;

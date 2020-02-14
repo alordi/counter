@@ -4,6 +4,7 @@ const port = process.env.PORT || 8080;
 const mongoose = require('mongoose');
 const Counter = require('./Counter.js');
 const Profile = require('./Profile.js');
+const Crypto = require('./CryptoHash.js');
 
 /**
  * Connect to MongoDB.
@@ -26,7 +27,7 @@ app.get("/", (req, res, next) => {
 // console.log that your server is up and running
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
-// get user profile data
+
 app.get('/:username', async function(req, res) {
   const conditions = {
     username: req.params.username
@@ -39,6 +40,61 @@ app.get('/:username', async function(req, res) {
       res.json({message: error});
   }
 });
+
+// register an account
+app.post('/register', async function(req, res) {
+	const salt = Crypto.generateRandomSalt
+	const fields = {
+		username: req.params.username,
+		password: Crypto.hashPasswordWithSalt(req.params.password, salt),
+		salt: salt,
+		initcounter: req.params.initcounter,
+	};
+  try {
+      const makeProfile = await Profile.insertOne(fields);
+      res.json(makeProfile);
+  }
+  catch(error) {
+      res.json({message: error});
+  }
+});
+
+//signin user
+//take input, check it against database
+//username: does it exist?
+//password: when salted with user salt and then hashed,
+//does it match the entry for the registered user?
+
+//also add session information
+app.post('/signin', async function(req, res) {
+  const conditions = {
+    username: req.params.username
+  };
+  try {
+	//returns Profile json object defined in Profile.js
+      const profileObj = await Profile.findOne(conditions);
+//      res.json(profileObj);
+
+	//check the password
+	const salt = profileObj.salt
+	const hash = profileObj.password
+	const verify = Crypto.checkPassword(req.params.password, salt, hash)
+
+	//if verify is true, let user login
+	//otherwise, fail
+  }
+  catch(error) {
+      res.json({message: error});
+  }
+});
+
+//we need to clear session information to log user out
+//app.get('/signout', async function(req, res) {
+
+	//todo
+
+//});
+
 
 // get the counters of the user
 app.get('/:_id', async function(req, res) {
@@ -55,7 +111,7 @@ app.get('/:_id', async function(req, res) {
 //post new counter
 app.post('/', async function(req, res) {
   const counter = new Counter({
-    val: req.body.value,
+    val: req.body.value
   });
 
   try {

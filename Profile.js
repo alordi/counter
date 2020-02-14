@@ -13,6 +13,10 @@ const profileSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+	salt: {
+		type: String,
+		required: true
+	},
     counters: {
         type: [{
             type: Schema.Types.ObjectId,
