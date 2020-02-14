@@ -35,5 +35,10 @@ Fill this in later...
 ## Questions 
 1. What was the final state of your project after one week?
 2. How was the project divided? Who did what?
+Austin Lordi :
+- set up repo and app
+- Created frameworks for frontend and backend
+- created database and backend routes for creating, upvoting, downvoting, and deleting counters
+
 3. What challenges did you face in working on this project that prevented progress?
 4. What would you do differently for the rest of your capstone work?
