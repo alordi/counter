@@ -1,17 +1,30 @@
-To Run:
+# Countr
+## Members
+* Anthony Blakley
+* Bradford DeMassa
+* Tyler Houge
+* Sarah Kiel
+* Austin Lordi
 
-In client (this is the frontend):
+## To Run
 
-``` npm install ```
+1. This is the frontend
 
-``` npm run build ```
+     Open a terminal and navigate to inside the client folder. In client run:
 
-Go to separate terminal
+    ```
+    npm install
+    npm run build
+    ```
 
-From root folder (this is the backend):
+2. This is the backend
 
-``` npm install ```
+    Open another terminal. From the root folder run:
 
-``` node server.js ```
+    ```
+    npm install
+    node server.js
+    ```
 
-go to localhost:8080
+After running these commands open up your browser and navigate to localhost:8080
+This will bring you to the homepage.
