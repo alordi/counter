@@ -41,5 +41,12 @@ Austin Lordi :
 - Created frameworks for frontend and backend
 - created database and backend routes for creating, upvoting, downvoting, and deleting counters
 
-3. What challenges did you face in working on this project that prevented progress?
+Tyler Hogue :
+- Tested repo to make sure it started properly
+- Helped teammates set up npm so they can contribute
+- Added routes for registration and signin. Made misc adjustments so the login can process works (added salt to Profile, fixed syntax bugs in CrypoHash
+
+3. What challenges did you face in working on this project that prevented progress
+- Making changes to what capstone project we can agree to work on.
+
 4. What would you do differently for the rest of your capstone work?
