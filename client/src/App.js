@@ -78,17 +78,21 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+<<<<<<< HEAD
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <button onClick={this.createCounter(1)}> New counter</button>
+=======
+          <button onClick={this.createCounter}> New counter</button>
+>>>>>>> ae2055915cc886c3e6cd63db1149ad2d8417afc6
           <a
             className="App-link"
-            href="https://reactjs.org"
+            href="https://github.com/alordi/counter"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Link to Countr's GitHub Page
           </a>
         </header>
       </div>

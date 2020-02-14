@@ -1,17 +1,45 @@
-To Run:
+# Countr
+## Members
+* Anthony Blakley
+* Bradford DeMassa
+* Tyler Houge
+* Sarah Kiel
+* Austin Lordi
 
-In client (this is the frontend):
+## To Run
 
-``` npm install ```
+1. This is the frontend
 
-``` npm run build ```
+     Open a terminal and navigate to inside the client folder. In client run:
 
-Go to separate terminal
+    ```
+    $>npm install
+    $>npm run build
+    ```
 
-From root folder (this is the backend):
+2. This is the backend
 
-``` npm install ```
+    Open another terminal. From the root folder run:
 
-``` node server.js ```
+    ```
+    $>npm install
+    $>node server.js
+    ```
 
-go to localhost:8080
+    After running these command follow this link to
+    [Countr's Homepage](http://localhost:8080).
+
+## Page Navigation and Use
+Fill this in later...
+
+## Questions 
+1. What was the final state of your project after one week?
+2. How was the project divided? Who did what?
+
+Austin Lordi :
+- set up repo and app
+- Created frameworks for frontend and backend
+- created database and backend routes for creating, upvoting, downvoting, and deleting counters
+
+3. What challenges did you face in working on this project that prevented progress?
+4. What would you do differently for the rest of your capstone work?
