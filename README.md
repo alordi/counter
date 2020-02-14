@@ -35,6 +35,7 @@ Fill this in later...
 ## Questions 
 1. What was the final state of your project after one week?
 2. How was the project divided? Who did what?
+
 Austin Lordi :
 - set up repo and app
 - Created frameworks for frontend and backend
