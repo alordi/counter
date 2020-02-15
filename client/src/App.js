@@ -82,7 +82,6 @@ class App extends React.Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <button onClick={this.createCounter(1)}> New counter</button>
-          <button onClick={this.createCounter}> New counter</button>
           <a
             className="App-link"
             href="https://github.com/alordi/counter"
@@ -96,5 +95,4 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;
+export default App; 

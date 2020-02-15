@@ -24,7 +24,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Countr</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +39,42 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!--LOG IN INFO-->
+    <button class="register_button">Register an Account
+      <form class="register_form">
+        <fieldset>
+          <!-- Form Name -->
+          <legend>Register</legend>
+          
+          <!-- Text input-->
+          <div class="register_form">
+            <label class="col-md-4 control-label" for="Username">Username</label>  
+            <div class="col-md-4">
+            <input id="Username" name="Username" type="text" placeholder="Username" class="form-control input-md" required="">
+            <span class="help-block">This is your username which can be viewed by other users</span>  
+            </div>
+          </div>
+          
+          <!-- Password input-->
+          <div class="register_form">
+            <label class="col-md-4 control-label" for="Password Field">Password</label>
+            <div class="col-md-4">
+              <input id="Password Field" name="Password Field" type="password" placeholder="Password" class="form-control input-md" required="">
+              <span class="help-block">Choose a password longer than 4 characters</span>
+            </div>
+          </div>
+          
+          <!-- Button (Double) -->
+          <div class="register_form">
+            <label class="col-md-4 control-label" for="button1id">Confirm</label>
+            <div class="col-md-8">
+              <button id="button1id" name="button1id" class="btn btn-danger">Cancel</button>
+              <button id="Submit" name="Submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </button>
+    
   </body>
 </html>
